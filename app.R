@@ -19,8 +19,9 @@ ui <- fluidPage(
                 dateInput("dateinput", "Imagery Date",
                           value = Sys.Date() - 1, # todays imagery may not be available yet
                           max = Sys.Date() # avoid requesting future dates
-                )
-  ))
+                )),
+  a("See the code on github",
+    href="https://github.com/khondula/leaflet-in-R-shinydemo1"))
 
 # server definition
 server <- function(input, output) {
